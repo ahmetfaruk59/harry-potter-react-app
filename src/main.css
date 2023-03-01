@@ -1,0 +1,666 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: harryPotter;
+    src: url(../src/assets/fonts/hp.TTF);
+}
+
+body {
+    background-color: #0A0A0A;
+    color: #fff;
+    font-family: harryPotter;
+
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+.container {
+    height: 85vh;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*====== navbar styles start ======*/
+.navbar {
+    padding: 10px 0;
+    flex-direction: column;
+}
+
+.navbar .logo {
+    width: 150px;
+}
+
+.navbar .logo img {
+    width: 100%
+}
+
+.navbar .nav-links {
+    width: 70%;
+    padding: 10px;
+    margin-top: 1rem;
+}
+
+.navbar .nav-links ul {
+    justify-content: space-evenly;
+}
+
+.navbar .nav-links ul li:last-child {
+    transform: rotate(180deg);
+}
+
+.navbar .nav-links ul li a {
+    font-size: 1.7rem;
+    color: #e51013;
+    font-family: harryPotter;
+    transition: .3s ease;
+}
+
+.navbar .nav-links ul li a:hover {
+    color: #f0f0f0;
+}
+@media screen and (max-width: 1370px) {
+   .nav-links {
+        width: 90% !important;
+    }
+  }
+@media screen and (max-width: 1110px) {
+   .nav-links {
+        width: 100% !important;
+    }
+    .navbar .nav-links ul li:last-child svg,.navbar .nav-links ul li:first-child svg {
+     width: 250px;
+    }
+  }
+@media screen and (max-width: 800px) {
+    .navbar .nav-links ul li:last-child svg,.navbar .nav-links ul li:first-child svg {
+     width: 100px;
+    }
+  }
+@media screen and (max-width: 530px) {
+    .navbar .nav-links ul li:last-child svg,.navbar .nav-links ul li:first-child svg {
+     display: none;
+    }
+  }
+/*====== navbar styles end ======*/
+
+
+/*====== home styles start ======*/
+.home {
+    flex-wrap: wrap;
+    width: 100%;
+    height: 80vh;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/*====== home styles end ======*/
+
+
+
+/*====== notfound styles start ======*/
+.notfound {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    font-family: harryPotter;
+}
+
+.notfound h4 {
+    font-size: 5rem;
+    letter-spacing: 10px;
+}
+
+.notfound p {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.notfound img {
+    width: 500px;
+    border-radius: 5px;
+}
+
+.notfound a {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.notfound a:hover>span {
+    padding-left: 5px;
+}
+
+.notfound a span {
+    transition: .2s ease-in;
+}
+@media screen and (max-width:550px) {
+    .notfound img {
+        width: 400px;
+        margin-bottom: 1rem;
+    }
+    .notfound {
+        justify-content: start;
+        padding-top: 2rem;
+    }
+}
+
+/*====== notfound styles end ======*/
+
+/*====== card styles start ======*/
+.cardLink {
+    flex-basis: 250px;
+    height: 350px;
+    background-color: #e51013;
+    border-radius: 10px;
+    transition: .6s;
+}
+
+
+.cardLink:hover,
+.hero:hover {
+    filter: grayscale(.3);
+    transform: scale(1.04);
+    border-radius: 1px;
+}
+
+.cardLink:hover>.card,
+.hero:hover {
+    outline: none;
+    border-color: #b9d6ed;
+    box-shadow: 0 0 10px #b9d6ed;
+
+
+}
+
+.card {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 2rem;
+    color: #fff;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+.card svg:nth-child(2) {
+    width: 50px;
+    height: 50px;
+}
+@media screen and (max-width:1130px){
+    .cardLink {
+        flex-basis: 200px;
+        height: 300px;
+    }
+}
+@media screen and (max-width:912px){
+    .cardLink {
+        flex-basis: 170px;
+        height: 220px;
+    }
+    .home {
+        gap: .5rem;
+    }
+    .card {
+        gap: 1rem;
+    }
+    .card svg:nth-child(2) {
+        width: 35px;
+        height: 35px;
+    }
+    .quote p{
+        font-size: 1.7rem !important;
+    }
+    .quote h4{
+        font-size: 1.7rem!important;
+    }
+}
+/*====== card styles end ======*/
+
+
+/*====== characters styles start ======*/
+.chars {
+    padding-top: 2rem;
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.hero {
+    background-color: #1a1a1a;
+    width: 220px;
+    height: 300px;
+    border-radius: 7px;
+    justify-content: center;
+    transition: .4s ease;
+    filter: grayscale(.9);
+
+}
+
+.hero:hover {
+    filter: grayscale(0);
+}
+
+.hero:hover>h2 {
+    margin-top: 16rem;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: #fff;
+    transition: .4s ease;
+}
+
+/*====== characters styles end ======*/
+
+/*====== pagination styles start ======*/
+.pagination-nav {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.pagination {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pagination .page-item {
+    border: 1px solid #fff;
+    padding: 5px 7px;
+}
+
+.pagination .page-item a {
+    color: #fff;
+    cursor: pointer;
+}
+
+/*====== pagination styles end ======*/
+
+/*====== loading styles start ======*/
+
+.loadingContainer {
+    display: block;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 60%;
+}
+
+.circle-1 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 10px solid #fff;
+    border-radius: 600px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    animation: Move-Right-360 10s infinite;
+    -webkit-animation: Move-Right-360 4s infinite;
+}
+
+.circle-2 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 10px solid #fff;
+    border-radius: 600px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    animation: Move-Left-360 10s infinite;
+    -webkit-animation: Move-Left-360 4s infinite;
+}
+
+.circle-3 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 10px solid #fff;
+    border-radius: 600px;
+    margin-top: 100px;
+    margin-left: 100px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    animation: Move-Right-360 10s infinite;
+    -webkit-animation: Move-Right-360 4s infinite;
+}
+
+.circle-4 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 10px solid #fff;
+    border-radius: 600px;
+    margin-top: 150px;
+    margin-left: 150px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    animation: Move-Left-360 10s infinite;
+    -webkit-animation: Move-Left-360 4s infinite;
+}
+
+.circle-5 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 10px solid #fff;
+    border-radius: 600px;
+    margin-top: 200px;
+    margin-left: 200px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    animation: Move-Right-360 10s infinite;
+    -webkit-animation: Move-Right-360 4s infinite;
+}
+
+.square-1,
+.square-2,
+.square-3,
+.square-4 {
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 80px;
+    width: 340px;
+    height: 340px;
+    border: 10px solid #fff;
+}
+
+.square-1 {
+    animation: Move-Right-90 10s infinite;
+    -webkit-animation: Move-Right-90 4s infinite;
+}
+
+.square-2 {
+    animation: Move-Right-180 10s infinite;
+    -webkit-animation: Move-Right-180 4s infinite;
+}
+
+.square-3 {
+    animation: Move-Right-270 10s infinite;
+    -webkit-animation: Move-Right-270 4s infinite;
+}
+
+.square-4 {
+    animation: Move-Right-360 10s infinite;
+    -webkit-animation: Move-Right-360 4s infinite;
+}
+
+
+
+/* ===== KeyFrams ===== */
+@-webkit-keyframes Move-Right-180 {
+    100% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes Move-Right-180 {
+    100% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+
+@-webkit-keyframes Move-Right-90 {
+    100% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes Move-Right-90 {
+    100% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+
+@-webkit-keyframes Move-Right-270 {
+    100% {
+        -webkit-transform: rotate(27);
+        transform: rotate(270deg);
+    }
+}
+
+@keyframes Move-Right-270 {
+    100% {
+        -webkit-transform: rotate(27);
+        transform: rotate(270deg);
+    }
+}
+
+@-webkit-keyframes Move-Right-360 {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes Move-Right-360 {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes Move-Left-360 {
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes Move-Left-360 {
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+
+@media screen and (max-width:1140px) {
+    .loadingContainer {
+        margin-right: 70% ;
+    }
+}
+@media screen and (max-width:950px) {
+    .loadingContainer {
+        margin-right: 90% ;
+    }
+}
+@media screen and (max-width:700px) {
+    .loadingContainer {
+        margin-right: 110% ;
+    }
+}
+@media screen and (max-width:620px) {
+    .loadingContainer {
+        margin-right: 130% ;
+    }
+}
+@media screen and (max-width:550px) {
+    .loadingContainer {
+        margin-right: 150% ;
+    }
+}
+@media screen and (max-width:480px) {
+    .loadingContainer {
+        margin-right: 170% ;
+    }
+}
+
+/*====== loading styles end ======*/
+
+
+/*====== Quote styles start ======*/
+
+.typing-text {
+    width: 11rem;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: harryPotter;
+    font-size: 1.9rem;
+    letter-spacing: 1px;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+/*====== Quote styles end ======*/
+
+
+/*====== character detail styles start ======*/
+.detail {
+    width: 60%;
+    margin-top: 4rem;
+    height: 65vh;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 7rem 2rem 0 2rem;
+    position: relative;
+    border-radius: 10px;
+
+}
+
+.detail-row {
+    flex-basis: 45%;
+    padding: 10px;
+    gap: 5px;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.detail-col {
+    padding: .6rem 1rem;
+    border-bottom: 3px solid #a85;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1rem;
+
+}
+
+.detail-col span {
+    font-size: 1.9rem;
+    letter-spacing: 1px;
+    color: #e51013;
+    width: 120px;
+}
+
+.hero-image {
+    position: absolute;
+    right: 150px;
+    width: 180px;
+    top: 5%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+  }
+
+.hero-image img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+
+/*====== character detail styles end ======*/
+/*====== quotes home styles start ======*/
+.quote{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+.quote p{
+    font-size: 2rem;
+}
+.quote p span{
+    font-size: 3rem;
+    color: #e51013;
+}
+.quote h4{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #e51013;
+}
+/*====== quotes home styles end ======*/
+
+
+/*====== spells styles start ======*/
+.spells{
+    padding-top: 2rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+    width: 70%;
+}
+.spell{
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border-bottom: 1px solid #fff;
+}
+.spell span{
+    color: #e51013;
+    font-size: 1.6rem;
+}
+.spell p{
+    color: #ffffffc5;
+    font-size: 1.6rem;
+}
+/*====== spells styles end ======*/
+
+.audio-player{
+    position: relative;
+}
+.play-btn{
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e51013;
+}
+.play-btn svg {
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
